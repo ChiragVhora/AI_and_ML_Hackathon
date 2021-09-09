@@ -1,0 +1,9 @@
+make Custom haar cascade classifier,  video : https://youtu.be/dZ4itBvIjVY
+    Code from video : https://github.com/murtazahassan/OpenCV-Python-Tutorials-and-Projects/tree/master/Intermediate/Custom%20Object%20Detection
+
+Custom haar cascade classifier Software :
+    https://amin-ahmadi.com/cascade-trainer-gui/
+
+Ready made Haar cascade classifiers (XMLs)-
+    https://github.com/murtazahassan/OpenCV-Python-Tutorials-and-Projects/tree/master/Intermediate/Custom%20Object%20Detection/haarcascades
+
