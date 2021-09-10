@@ -1,0 +1,13 @@
+In My variant i have used Keras tunner for tuning the neural network
+    tuning became so easy with Hyper tunners
+
+ reference links :
+    video keras tuner : https://youtu.be/vvC15l4CY1Q
+                        https://www.youtube.com/watch?v=Clo1HKB50Ug
+
+how to install (in brief)
+    - pre requisites are tensorflow (keras), pandas, numpy
+    - add library as per your python version
+    - for tunner refer link : https://keras.io/keras_tuner/
+
+ potencial errors are mentioned in code at specific loc , check it ( MY_TEST file)

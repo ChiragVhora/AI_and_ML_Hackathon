@@ -34,6 +34,21 @@ def make_list_from_list_of_tuples_for_prediction():
     pass
 
 
+def check_negative_slicing():
+    list_ = [i for i in range(10)]
+    slice_list = list_[:-2]
+    print(f"list : {list_} \nSliced : {slice_list}")
+    pass
+
+
+def check_pandas():
+    import pandas as pd
+    # import kerastuner
+    df = pd.DataFrame({'X': [78, 85, 96, 80, 86], 'Y': [84, 94, 89, 83, 86], 'Z': [86, 97, 96, 72, 83]});
+    print(df)
+    pass
+
+
 if __name__ == '__main__':
     # print_hi('PyCharm')
     # import cv2
@@ -49,6 +64,9 @@ if __name__ == '__main__':
     # frame_height, frame_width, _ = resized_original_img.shape
     # print(frame_height, frame_width, _)
 
+    # function prob tried
     # check_numpy_list_comprehension()
     # check_fisher_face_recognizer()
-    make_list_from_list_of_tuples_for_prediction()
+    # make_list_from_list_of_tuples_for_prediction()
+    # check_negative_slicing()
+    check_pandas()
