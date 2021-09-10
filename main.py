@@ -26,6 +26,14 @@ def check_fisher_face_recognizer():
     pass
 
 
+def make_list_from_list_of_tuples_for_prediction():
+    prediction = [(x/10, 1-x/10) for x in range(10)]
+    # print(prediction)
+    true_pred_list = [true_pred for _,true_pred in prediction]
+    print(true_pred_list)
+    pass
+
+
 if __name__ == '__main__':
     # print_hi('PyCharm')
     # import cv2
@@ -42,4 +50,5 @@ if __name__ == '__main__':
     # print(frame_height, frame_width, _)
 
     # check_numpy_list_comprehension()
-    check_fisher_face_recognizer()
+    # check_fisher_face_recognizer()
+    make_list_from_list_of_tuples_for_prediction()
