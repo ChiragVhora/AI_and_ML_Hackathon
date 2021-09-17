@@ -46,7 +46,7 @@ cnn_model = get_model()
 
 test_folder_path =  r"C:\Users\chira\PycharmProjects\AI_and_ML_Hackathon\Day_12_Inage_classification_CNN\1_hackathon_Image_classification_using_cnn\Dataset\test"
 
-from common_python_files.Images_from_folder import cmn_get_all_image_path_from_folder
+from common_python_files.get_image_path import cmn_get_all_image_path_from_folder
 image_files_path = cmn_get_all_image_path_from_folder(test_folder_path, include_sub_folder=True )
 
 print(image_files_path)

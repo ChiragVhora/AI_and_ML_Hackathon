@@ -5,7 +5,6 @@ from keras.layers import Dense              # dense for making hidden and output
 ###################### function ###################################
 
 def save_pima_diabetes_NN_model(model):
-    from keras.models import model_from_json  # saving and loading model
     model_JSON = model.to_json()
     with open("NN_pima_diabetes_model.json", "w") as JSON_file:
         JSON_file.write(model_JSON)

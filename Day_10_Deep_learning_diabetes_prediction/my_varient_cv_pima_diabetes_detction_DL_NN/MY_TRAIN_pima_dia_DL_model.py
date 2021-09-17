@@ -4,7 +4,7 @@
         2. get best model by keras tuner :
             ref - https://youtu.be/Clo1HKB50Ug
                 - https://www.youtube.com/watch?v=vvC15l4CY1Q
-        3. save higher accuracy model
+        3. save higher accuracy best model
 '''
 import time
 

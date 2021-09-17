@@ -9,7 +9,7 @@ def load_pima_diabetes_NN_model():
 
     loaded_model_JSON = None
     with open("NN_pima_diabetes_model.json", "r") as JSON_file:
-        loaded_model_JSON = JSON_file.read(loaded_model_JSON)
+        loaded_model_JSON = JSON_file.read()
 
     model = model_from_json(loaded_model_JSON)
     model.load_weights("model.h5")
