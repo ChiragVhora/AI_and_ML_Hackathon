@@ -116,7 +116,7 @@ validation_dataset = validation_data_gen_obj.flow_from_directory(directory=valid
                                                                  )
 
 # ################# Callback list - early stopping and check point #################
-model_name = 'hand_gesture_cnn_model.h5'
+model_name = 'my_hand_gesture_cnn_model.h5'
 callback = [
     EarlyStopping(monitor='val_loss', patience=15),  # if val_loss is not being efficient till the patience reached
     # then terminate training process and save best model till now

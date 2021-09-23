@@ -11,7 +11,7 @@ from keras.layers import Dropout                # remove dead neuron
 from keras.preprocessing.image import ImageDataGenerator    # data gen
 
 # variables #############################################
-from common_python_files.save_OR_load_model_into_jason import cmn_save_nn_model
+from common_python_files.save_OR_load_model_into_json import cmn_save_nn_model
 
 model_name = "Gujarati_classifier_cnn_model"
 

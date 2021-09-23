@@ -5,4 +5,10 @@ Use redme file and reference links for more info
   main logics are explained step by step 
 
 for me 
-  - + emotion recognition 
+  - + emotion recognition
+  
+
+# references
+* Dlib Models :
+  * link : https://github.com/davisking/dlib-models
+  * includes models for human , car, face, age, gender, .... 

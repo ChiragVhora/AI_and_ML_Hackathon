@@ -5,6 +5,7 @@ import os
 
 # variables ################################
 # classes = ['01_palm', '02_l', '03_fist', '04_fist_moved', "05_thumb", "06_index", "07_ok", "08_palm_moved", "09_c", "10_down"]
+from common_python_files.save_OR_load_model_into_json import cmn_load_nn_model
 from main import cmd_progressBar
 
 classes = ["index finger", "ok gesture", "palm", "pinky finger", "thumb down", "thumb up"]
@@ -29,13 +30,13 @@ def classify(img_path):
     results = cnn_model.predict(test_image_arr_expanded)    # passing image arr as we train for that
 
     # print("result : ", results)
-    arr = np.argmax(results[0])
+    pred_val = np.argmax(results[0])
     # print("arr : ", arr)
 
     # maxx = np.amax(arr)
-    max_prob = arr.argmax(axis=0)
+    # max_prob = arr.argmax(axis=0)
     # max_prob += 1
-    prediction = classes[max_prob]
+    prediction = classes[pred_val]
     # prediction = classes[max_prob-1]
 
     first_3_char = prediction[:3]      # i.e 01_palm -> 01
@@ -51,12 +52,12 @@ def classify(img_path):
 
 
 # load model #############################333
-model_name = 'hand_gesture_cnn_model.h5'
-cnn_model = load_model(model_name)
+model_name = "hand_gesture_cnn_model"
+cnn_model = cmn_load_nn_model(model_name)
 print("model loaded.")
 
 # get all images from test folder ###############################
-test_folder_path =  r"C:\Users\chira\PycharmProjects\AI_and_ML_Hackathon\Day_13_HandGesture_classification\Handgesture_Dataset\test"
+test_folder_path = r"/Day_13_HandGesture_classification_CNN/Handgesture_Dataset/test"
 from common_python_files.get_image_path import cmn_get_all_image_path_from_folder
 image_files_path = cmn_get_all_image_path_from_folder(test_folder_path, include_sub_folder=True, files_to_get_per_folder=10)
 

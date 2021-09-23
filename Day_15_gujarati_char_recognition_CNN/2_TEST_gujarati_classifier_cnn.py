@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # variables ################################
-from common_python_files.save_OR_load_model_into_jason import cmn_load_nn_model
+from common_python_files.save_OR_load_model_into_json import cmn_load_nn_model
 from main import cmd_progressBar
 
 classes = [ "ALA", "ANA", "B", "BHA", "CH", "CHH", "D", "DA", "DH", "DHA", "F", "G", "GH", "GNA", "H", "J", "JH", "K", "KH", "KSH", "L", "M", "N", "P", "R", "S", "SH", "SHH", "T", "TA", "TH", "THA", "V", "Y"]

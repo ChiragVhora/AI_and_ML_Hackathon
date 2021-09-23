@@ -19,8 +19,10 @@ face_Height = 50
 save_gray_color_face = False    # false - saves original color , true for gray img
 
 #######################  Setting  ##############################
-
-myPath = 'data/images' # your pics:  '/home/pi/Desktop/data/images'
+nameImage = "images"
+captureDelay = 0.5
+captureCount = 100
+myPath = f'data/{nameImage}' # your pics:  '/home/pi/Desktop/data/images'
 cameraNo = 0
 cameraBrightness = 180
 moduleVal = 10  # SAVE EVERY I th FRAME TO AVOID REPETITION
@@ -28,9 +30,10 @@ minBlur = 500  # SMALLER VALUE MEANS MORE BLURRINESS PRESENT
 grayImage = False # IMAGES SAVED COLORED OR GRAY
 saveData = True   # SAVE DATA FLAG
 showImage = True  # IMAGE DISPLAY FLAG
-imgWidth = 180
-imgHeight = 120
-
+imgWidth = 300
+imgHeight = 300
+blurImage = True
+blur_intensity = (3, 3)
 
 #####################################################
 
@@ -47,21 +50,28 @@ countSave =0
 def saveDataFunc():
     global countFolder
     countFolder = 0
-    while os.path.exists( myPath+ str(countFolder)):
+    while os.path.exists( myPath + str(countFolder)):
         countFolder += 1
     os.makedirs(myPath + str(countFolder))
 
 if saveData:saveDataFunc()
 
-
+captured = -1
 while True:
+    captured+=1
+    if captured >= captureCount and captureCount:
+        break
+    time.sleep(captureDelay)
 
     success, img = cap.read()
     img = cv2.resize(img,(imgWidth,imgHeight))
+    if blurImage:
+        img = cv2.GaussianBlur(img, blur_intensity, cv2.BORDER_DEFAULT)
+
     if grayImage:img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     if saveData:
         blur = cv2.Laplacian(img, cv2.CV_64F).var()     # getting how much blurred the img is ,if more blurred then-> discard
-        if count % moduleVal ==0 and blur > minBlur:
+        if count % moduleVal ==0 and blur > minBlur or blurImage:
 
             # extra code for saving face only (hackathon logic)---------------------------------
             if only_face_collection:
