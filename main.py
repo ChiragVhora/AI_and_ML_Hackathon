@@ -272,6 +272,12 @@ def check_get_img_path():
     pass
 
 
+def My_sample_coe():
+    x=5
+    print(id(x)==id(x)*-1+1)
+    pass
+
+
 if __name__ == '__main__':
     # print_hi('PyCharm')
 
@@ -288,8 +294,4 @@ if __name__ == '__main__':
     # download_ima()
     # check_get_img_path()
     # print("hello")
-    n = 1000000
-    for i in range(n):
-        cmd_progressBar(i, n, message="first")
-
-        cmd_progressBar(i, n, message="second")
+    My_sample_coe()

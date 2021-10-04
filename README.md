@@ -10,5 +10,6 @@ for me
 
 # references
 * Dlib Models :
+  * Day 1 to 4, 23, 26 were theory based.
   * link : https://github.com/davisking/dlib-models
   * includes models for human , car, face, age, gender, .... 
